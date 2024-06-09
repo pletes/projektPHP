@@ -1,0 +1,523 @@
+.bodyDodavanjeNamirnice {
+    background-color: cornsilk;
+
+}
+
+.bodiZuti {
+    margin: 0;
+    text-align: -webkit-center;
+    font-family: monospace;
+    background-color: cornsilk;
+}
+
+.bodi {
+    margin: 0;
+    text-align: -webkit-center;
+    font-family: monospace;
+    background-image: url('slike/dot-grid.png');
+}
+
+.headerNaslovne {
+    background-color: #fff8dc;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+
+.slikeNaslovne {
+    width: 50%;
+    display: inline-block;
+    height: fit-content;
+    text-align-last: center;
+    text-align: -webkit-center;
+}
+
+#kuharicaSlika {
+    width: 40%;
+}
+
+#hranaSlika {
+    width: 60%;
+}
+
+.qouteNaslovna {
+    width: 50%;
+    align-content: center;
+    text-align: -webkit-center;
+}
+
+.qouteNaslovna p {
+    font-size: 44px;
+    border-left: 5px solid #636365;
+    width: 65%;
+    padding: 2%;
+    text-align: left;
+    color: #636365;
+}
+
+nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    text-align: center;
+}
+
+.nav-dots {
+    list-style: none;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(37, 37, 37, 0.856);
+    padding: 0;
+    border: 0;
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(167, 228, 0, 0.8);
+}
+
+.nav-dots .nav-dot--active {
+    background-color: red;
+}
+
+nav {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #636365;
+    padding: 0 2%;
+}
+
+nav li {
+    float: left;
+    padding: 0.1%
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.activeMenuItem {
+    background-color: #111;
+}
+
+.sticky {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.content p {
+    font-size: large;
+    text-align: left;
+}
+
+.content {
+    padding: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.clanak {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid cornsilk;
+    border-radius: 25px;
+    padding: 0.7%;
+    align-items: center;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 283px;
+    max-height: 283px;
+    justify-content: center;
+}
+
+.articleDio {
+    display: flex;
+    flex-direction: row;
+}
+
+.articleDio p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+}
+
+.content img {
+    width: 27%;
+    height: fit-content;
+    align-self: center;
+}
+
+.prijava {
+    padding: 2%;
+    border: 3px solid black;
+    border-color: #636365;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contentVise {
+    padding: 16px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    align-items: center;
+}
+
+.contentVise .prijava form {
+    text-align: left;
+}
+
+.contentVise .prijava form input {
+    width: 100%;
+}
+
+.contentVise div {
+    width: 40%;
+}
+
+.informacije {
+    padding: 2%;
+    border: 3px solid black;
+    border-color: #636365;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.odabir {
+    border: none;
+    background-color: inherit;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+.odabir:hover {
+    background: #eee;
+}
+
+section {
+    padding: 2%;
+}
+
+section h1 {
+    padding: 1%;
+}
+
+#slikaClanka {
+    width: 30%;
+}
+
+.clanakFull {
+    width: 70%;
+    border: 6px solid cornsilk;
+    border-radius: 25px;
+    padding: 1%;
+    text-align: -webkit-left;
+    margin-bottom: 2%;
+    font-size: larger;
+}
+
+.naslovClanka {
+    margin-top: 5%;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 0.5%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    background-color: #636365;
+}
+
+footer a {
+    color: cornsilk;
+}
+
+/* .dropdown-contentt, */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #636365;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* .dropdown-contentt a, */
+.dropdown-content a {
+    background-color: #636365;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+/* .dropdown-contentt a:hover, */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* .dropdown-contentt.show, */
+.dropdown-content.show {
+    display: block;
+}
+
+#dropdown-content-vise.show {
+    transform: translateX(-10%);
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: x-large;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #636365;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown .dropbtn {
+    font-size: x-large;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #636365;
+    font-family: inherit;
+    margin: 0;
+}
+
+.contentRecepti {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.dodajRecept {
+    width: 53%;
+}
+
+.recept {
+    border: 6px solid #636365;
+    border-radius: 25px;
+    padding: 1.7%;
+    background-color: white;
+    text-align-last: left;
+    width: 50%;
+}
+
+.recept img {
+    width: 45%;
+    float: right;
+    padding: 1%;
+}
+
+#decisionFormUpdate input,
+#decisionFormUpdate textarea,
+#decisionFormUpdate select {
+    border: 3px solid #636365;
+    border-radius: 5px;
+    background-color: cornsilk;
+}
+
+#decisionFormUpdate textarea {
+    width: -webkit-fill-available;
+}
+
+#decisionFormUpdate {
+    width: 40%;
+    padding: 2%;
+    margin-top: 2%;
+    border: 10px solid #636365;
+    background-color: cornsilk;
+    border-radius: 25px;
+}
+
+.updateDiv {
+    align-items: center;
+    text-align: left;
+}
+
+.lrDiv {
+    width: 100%;
+    height: 82.2vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.lr {
+    border: 5px solid #636365;
+    border-radius: 25px;
+    padding: 1.5%;
+}
+
+.prijavljeniKorisnik {
+    float: right;
+    font-weight: bold;
+    font-size: larger;
+}
+
+@media screen and (max-width:1966px) {
+    .content {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:1650px) {
+    .qouteNaslovna p {
+        font-size: 30px;
+    }
+
+    .clanak {
+        width: 52%;
+    }
+
+    .naslovClanka {
+        margin-top: 7%;
+    }
+    .content {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    .recept img {
+        width: 100%;
+        float: none;
+    }
+    .content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .headerNaslovne {
+        flex-direction: column;
+    }
+
+    .slikeNaslovne {
+        width: 100%;
+    }
+
+    .qouteNaslovna {
+        width: 100%;
+    }
+
+    .qouteNaslovna p {
+        width: 87%;
+        font-size: 30px;
+    }
+
+    .naslovClanka {
+        margin-top: 8%;
+    }
+
+    .recept{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .clanak {
+        width: 80%;
+    }
+
+    .qouteNaslovna p {
+        font-size: 20px;
+    }
+
+    .naslovClanka {
+        margin-top: 13%;
+    }
+    .prijavljeniKorisnik{
+        float: right;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    #decisionFormUpdate input,
+    #decisionFormUpdate textarea,
+    #decisionFormUpdate select {
+        width: -webkit-fill-available;
+    }
+
+    .prijavljeniKorisnik{
+        float: none;
+        padding: 10%;
+    }
+}
+@media screen and (max-width:600px){
+    #navbar{
+        position:relative;
+    }
+    #navbar ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .dropdown-content.show{
+        display: contents;
+    width: -webkit-fill-available;
+    }
+    .recept{
+        width: 100%;
+    }
+}

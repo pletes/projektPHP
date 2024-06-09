@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Namirnicu</title>
+</head>
+
+<body class="bodyDodavanjeNamirnice">
+    <form name="dodavanjeNamirnice" class="dodavanjeNamirnice" method="post" action="skripta.php">
+        
+        <label for="naslovNamirnice">Unesite naziv Vaše namirnice:</label>
+        <br />
+        <input type="text" name="naslovNamirnice" id="title" required>
+        <span id="porukaTitle" class="bojaPoruke"></span>
+        <br /> <br />
+        
+        <label for="uvodNamirnice">Unesite kratki sadržaj o Vašoj namirnici:</label>
+        <br />
+        <textarea id="about" name="uvodNamirnice" cols="30" rows="10" required></textarea>
+        <span id="porukaAbout" class="bojaPoruke"></span>
+        <br /> <br />
+        
+        <label for="tekstNamirnice">Unesite sadržaj Vaše namirnice:</label>
+        <br />
+        <textarea id="content" name="tekstNamirnice" cols="30" rows="10" required></textarea>
+        <span id="porukaContent" class="bojaPoruke"></span>
+        <br /> <br />
+       
+        <label for="slikaNamirnice">Unesite sliku Vaše namirnice:</label>
+        <br />
+        <input id="pphoto" name="slikaNamirnice" type="file" accept="image/jpg,image/gif, image/png" required></input>
+        <span id="porukaSlika" class="bojaPoruke"></span>
+        <br /> <br />
+        
+        <label for="kategorija">Odaberite kategoriju</label><br />
+        <select id="category" name="kategorija" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="4">Voće</option>
+            <option value="5">Povrće</option>
+            <option value="9">Meso</option>
+            <option value="1">Mliječni proizvod</option>
+            <option value="3">Pekarski proizvod</option>
+            <option value="6">Začin</option>
+            <option value="7">Zaslađivač</option>
+            <option value="8">Ulje</option>
+            <option value="2">Jaja</option>
+        </select>
+        <span id="porukaKategorija" class="bojaPoruke"></span>
+        <br /> <br />
+        <label>Spremiti u arhivu:
+            <input type="checkbox" name="checkboxNamirnice">
+        </label>
+        <br /> <br />
+        <button type="reset" value="Poništi">Poništi</button>
+        <button type="submit" value="Prihvati" id="slanje">Prihvati</button>
+    </form>
+
+    <script type="text/javascript">
+
+        document.getElementById("slanje").onclick = function (event) {
+            var slanjeForme = true;
+
+            var poljeTitle = document.getElementById("title");
+            var title = document.getElementById("title").value;
+            if (title.length < 3 || title.length > 100) {
+                slanjeForme = false;
+                poljeTitle.style.border = "1px dashed red";
+                document.getElementById("porukaTitle").innerHTML = "<br>Naslov vjesti mora imati između 3 i 100 znakova!<br>";
+                document.getElementById("porukaTitle").style.color="red";
+            } else {
+                poljeTitle.style.border = "1px solid green";
+                document.getElementById("porukaTitle").innerHTML = "";
+            }
+
+            var poljeAbout = document.getElementById("about");
+            var about = document.getElementById("about").value;
+            if (about.length < 5 || about.length > 100) {
+                slanjeForme = false;
+                poljeAbout.style.border = "1px dashed red";
+                document.getElementById("porukaAbout").innerHTML = "<br>Kratki sadržaj mora imati između 5 i 100 znakova!<br>";
+                document.getElementById("porukaAbout").style.color="red";
+            } else {
+                poljeAbout.style.border = "1px solid green";
+                document.getElementById("porukaAbout").innerHTML = "";
+            }
+
+            var poljeContent = document.getElementById("content");
+            var content = document.getElementById("content").value;
+            if (content.length == 0) {
+                slanjeForme = false;
+                poljeContent.style.border = "1px dashed red"; 
+                document.getElementById("porukaContent").innerHTML = "<br>Sadržaj mora biti unesen!<br>";
+                document.getElementById("porukaContent").style.color="red";
+            } else {
+                poljeContent.style.border = "1px solid green";
+                document.getElementById("porukaContent").innerHTML = "";
+            }
+            
+            var poljeSlika = document.getElementById("pphoto"); 
+            var pphoto = document.getElementById("pphoto").value; 
+            if (pphoto.length == 0) {
+                slanjeForme = false;
+                poljeSlika.style.border = "1px dashed red"; 
+                document.getElementById("porukaSlika").innerHTML = "<br>Slika mora biti unesena!<br>";
+                document.getElementById("porukaSlika").style.color="red";
+            } else {
+                poljeSlika.style.border = "1px solid green";
+                document.getElementById("porukaSlika").innerHTML = "";
+            }
+            
+            var poljeCategory = document.getElementById("category"); 
+            if (document.getElementById("category").selectedIndex == 0) {
+                slanjeForme = false; 
+                poljeCategory.style.border = "1px dashed red";
+                document.getElementById("porukaKategorija").innerHTML = "<br>Kategorija mora biti odabrana!<br>";
+                document.getElementById("porukaKategorija").style.color="red";
+            } else {
+                poljeCategory.style.border = "1px solid green"; 
+                document.getElementById("porukaKategorija").innerHTML = "";
+            }
+            if (slanjeForme != true) {
+                event.preventDefault();
+            }
+
+        }
+    </script>
+</body>
+
+</html>
