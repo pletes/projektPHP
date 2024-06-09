@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hrv">
+<html lang="hrvv">
 
 <head>
     <link rel="stylesheet" href="style.css">
